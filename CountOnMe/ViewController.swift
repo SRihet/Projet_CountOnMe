@@ -51,37 +51,20 @@ class ViewController: UIViewController {
             }
     }
     
-    @IBAction func tappedAdditionButton(_ sender: UIButton) {
+
+    
+    //Factorisation du code initial
+    @IBAction func tappedOperatorButton(_ sender: UIButton) {
+        guard let operatorText = sender.titleLabel?.text else {
+            return
+        }
         if count.canAddOperator(elements: elements){
-            textView.text.append(" + ")
+            textView.text.append(" \(operatorText) ")
         } else {
             return displayAlert(message: "Un operateur est déja mis !")
         }
     }
     
-    @IBAction func tappedSubstractionButton(_ sender: UIButton) {
-        if count.canAddOperator(elements: elements) {
-            textView.text.append(" - ")
-        } else {
-            return displayAlert(message: "Un operateur est déja mis !")
-        }
-    }
-
-    @IBAction func tappedDivisionButton(_ sender: UIButton) {
-        if count.canAddOperator(elements: elements) {
-            textView.text.append(" ÷ ")
-        } else {
-            return displayAlert(message: "Un operateur est déja mis !")
-        }
-    }
-
-    @IBAction func tappedMultiplicationButton(_ sender: UIButton) {
-        if count.canAddOperator(elements: elements) {
-            textView.text.append(" x ")
-        } else {
-            return displayAlert(message: "Un operateur est déja mis !")
-        }
-    }
     
     @IBAction func tappedACButton(_ sender: UIButton) {
         textView.text.removeAll()

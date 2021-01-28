@@ -36,7 +36,7 @@ class Count {
             operationsToReduce[0] = "\(operationsToReduce[0])\(operationsToReduce[1])"
             operationsToReduce.remove(at: 1)
         }
-        
+        //prioritization of calculations (Multiplication / Division
         while operationsToReduce.contains("x") || operationsToReduce.contains("÷"){
             print("\(operationsToReduce) before prio")
             guard let product = calculateMultiplicationAndDivision(operationsToReduce: operationsToReduce) else {
