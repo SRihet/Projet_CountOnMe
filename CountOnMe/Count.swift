@@ -12,7 +12,7 @@ class Count {
     // Error check computed variables
     //retourne true si un des opérateurs est le dernier dans la collections
     func expressionIsCorrect(elements: [String]) -> Bool {
-        return elements.last != "+" && elements.last != "-" && elements.last != "÷" && elements.last != "x"
+        return elements.last != "+" && elements.last != "-" && elements.last != "÷" && elements.last != "x" && elements.first != "x" && elements.first != "÷" && elements.first != "+"
     }
     
     func expressionHaveEnoughElement(elements: [String]) -> Bool {
