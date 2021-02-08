@@ -81,6 +81,8 @@ class CountTestCase: XCTestCase {
     func testGivenTheLastElementIsOperator_WhenTestingcanAddPoint_ThenTheResultIsFalse() {
         count.elementString = "45.5 "
         XCTAssertFalse(count.canAddPoint())
+        count.elementString = ""
+        XCTAssertTrue(count.canAddPoint())
     }
 
     func testGivenTheExpressionContainsEqual_WhenTestingExpressionHaveResult_ThenThenTheResultMustBeTrue() {

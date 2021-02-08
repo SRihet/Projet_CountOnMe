@@ -58,7 +58,7 @@ final class Count {
 
     ///Returns a boolean after verifying that the last ellemnts contains ".".
     func canAddPoint() -> Bool {
-        let pointString: String = elements.last!
+        let pointString: String = elements.last ?? ""
         if pointString.contains(".") {
             return false
         }
